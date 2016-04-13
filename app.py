@@ -56,7 +56,7 @@ def upload():
 
 @app.route('/showSignUp')
 def showSignUp():
-    return render_template('signup.html')
+    return render_template('quiz.html')
 
 @app.route('/showAddWish')
 def showAddWish():
