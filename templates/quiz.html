@@ -4,7 +4,9 @@
   <head>
     <title>Python Flask Bucket List App</title>
 
-   
+    <script src="jquery-1.11.3.js">
+    </script>
+
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
@@ -44,9 +46,9 @@
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li id = "slide0" data-target="myCarousel" data-slide-to="0" class="active"></li>
+    <li id = "slide1" data-target="myCarousel" data-slide-to="1"></li>
+    <li id = "slide2" data-target="myCarousel" data-slide-to="2"></li>
     
   </ol>
 
@@ -55,7 +57,7 @@
     <div class="item active">
       <img src="cat.jpeg" class= "img-circle img-responsive" alt=":(">
       <div class="carousel-caption">
-        <h3>emo</h3>
+        <h3 id = "header0">emo</h3>
         <p>:(</p>
       </div>
     </div>
@@ -63,7 +65,7 @@
     <div class="item">
       <img src="emo1.jpg" class = "img-circle img-responsive" alt="not found">
       <div class="carousel-caption">
-        <h3>Dread</h3>
+        <h3 id="header1">Dread</h3>
         <p>8(</p>
       </div>
     </div>
@@ -71,7 +73,7 @@
     <div class="item">
       <img src="emo2.png" class = "img-circle img-responsive" alt="Flower">
       <div class="carousel-caption">
-        <h3>Nerd</h3>
+        <h3 id = "header2">Nerd</h3>
         <p>8)</p>
       </div>
     </div>
@@ -79,31 +81,37 @@
     <div class="item">
       <img src="emo3.png" class = "img-circle img-responsive" alt="Flower">
       <div class="carousel-caption">
-        <h3>Happy</h3>
+        <h3 id ="header3">Happy</h3>
         <p>:)</p>
       </div>
     </div>
   </div>
 
   <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" onClick="decrementSlideNum();">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" onClick="incrementSlideNum();">
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+
 </div>
+<button id="confirmSelection" type ="button" class="btn btn-default btn-success"> Yes</button>
+<input type="text" id="choice">
+<a href="JavaScript:void(0)" onClick="alert('hello!');">Say Hello</a>
+<a href="JavaScript:void(0)" onClick="openAlert('Hi how are you?');">Say Something</a>
       </div>
 
       
 
       <footer class="footer">
-        <p>&copy; Company 2016</p>
+        <p id ="footerSpace">&copy; Company 2016</p>
       </footer>
 
     </div>
+  <script src="quiz.js"></script>
   </body>
 </html>
 
