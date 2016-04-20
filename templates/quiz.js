@@ -1,6 +1,6 @@
 //for rankedIndex
 var emoCat1 = "";
-var slideNum = 0;
+var slideNum = 1;
 
 function openAlert(mess) {
   alert(mess);
@@ -8,29 +8,45 @@ function openAlert(mess) {
 
 function incrementSlideNum() {
 
-  if (slideNum < 3) {
+  if (slideNum <= 2) {
   slideNum = slideNum + 1;
   console.log(slideNum);
   }
-}
-
-function decrementSlideNum() {
-  if (slideNum >= 0) {
-    slideNum = slideNum - 1;
+  else if (slideNum >= 3) {
+    // if user goes through all the slides, reset the count to 1
+    slideNum = 1;
     console.log(slideNum);
   }
 }
 
+function decrementSlideNum() {
+  if (slideNum > 1) {
+    slideNum = slideNum - 1;
+    console.log(slideNum);
+  }
+  else if (slideNum <= 1) {
+    //if user reaches left bound of slides, reset them to the end
+    slideNum = 3;
+    console.log(slideNum);
+  }
+
+}
+
 $("#confirmSelection").click(function () {
+  
   alert("testing 123");
+
+  /*
   //var slideId = $("#choice").text();
   var slideNum = document.getElementById("choice").value;
   console.log(slideNum);
   
+  */
   if (slideNum == 1) {
     console.log("slide1 selected");
     emoCat1 = document.getElementById("header1").innerHTML;
     //emoCat1 = $("#header0").val()
+
   } 
   else if (slideNum == 2) {
     console.log("slide2 selected");
