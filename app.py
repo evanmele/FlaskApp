@@ -43,7 +43,7 @@ app.wsgi_app = StreamConsumingMiddleware(app.wsgi_app)
 
 @app.route('/')
 def main():
-    return render_template('index.html')
+    return render_template('quiz.html')
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():

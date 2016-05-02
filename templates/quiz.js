@@ -60,6 +60,18 @@ $("#confirmSelection").click(function () {
 
   console.log("Slide Number: " + slideNum + " Caption emotion / C1: " + emoCat1);
 
+  // grab emoCat1 and make flasksql alchemy request in database.
+  // select 3 elements from C2 based on the C1 input -> store these values into an array? both emotion name and image source name
+  // document.getElementsByTagName("img")[0].setAttribute("src", "<newimgURL>")
+  // or alternatively document.getElementById("image1").setAttribute("src", "<newimgURL>")
+  // CHANGE C2 Headers in image: document.getElementById("header1").innerHTML = Cat2List[0]
+  // CHANGE C2 HEADERs in image2: document.getElementById("header2").innerHTML = Cat2List[1]
+  // CHANGE C2 HEADERS in image3: document.getElementById("header3").innerHTML = Cat2List[2]
+
+})
+
+$("#lawlz").click(function() {
+  alert("ayeee lmao");
 })
 
 /*
